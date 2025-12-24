@@ -1,0 +1,20 @@
+.MuiButton-root.auth-button, .auth-button {
+  margin: 0 7px;
+  border: 1px solid #0c1727;
+  color: #0a0b0d;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 15px;
+  border-radius: 0;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+.auth-button:hover {
+  color: #fff !important;
+  background-color: #1c3967 !important;
+  border-color: #1c3967;
+}
+.auth-button.clicked {
+  transform: scale(0.95);
+}

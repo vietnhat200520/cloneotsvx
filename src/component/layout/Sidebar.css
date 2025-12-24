@@ -1,0 +1,13 @@
+.sidebar{ width: 100%;
+     }
+.sidebar .sidebar-button{ 
+    background: #d2d6da; 
+    color: #111; font-weight: bold;
+     padding: 8px;
+      justify-content: flex-start; 
+      text-transform: none; 
+      width: 100%; }
+.sidebar .sidebar-button:hover{ background: #ebeff3; }
+.sidebar .sidebar-list{ background: #f1f1f1; border: 1px solid #ddd; }
+.sidebar .submenu{ padding-left: 12px; background: #fafafa; }
+.sidebar .list-item-active{ background: rgba(0,0,0,0.05); }

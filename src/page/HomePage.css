@@ -1,0 +1,124 @@
+@import "../component/layout/Sidebar.css";
+/* HomePage.css */
+
+/* 1. Nền tổng thể trang web */
+.homepage-root {
+  background-color: #f5f7f9; /* Màu xám nhạt chuyên nghiệp như ảnh mẫu */
+  
+  display: flex;
+  flex-direction: column;
+}
+
+/* 2. Container chính - Cực kỳ quan trọng để co giãn */
+.MuiContainer-root.mainContainer {
+  display: flex !important;
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 0 16px;
+  
+  /* Cấu hình co giãn linh hoạt */
+  width: 100%;           
+  max-width: 1200px;    /* Không vượt quá mốc lg của MUI */
+  margin-left: auto;    /* Căn giữa */
+  margin-right: auto;   /* Căn giữa */
+  box-sizing: border-box; 
+}
+
+/* 3. Sidebar (Danh mục bên trái) */
+.sidebarWrapper {
+  width: 280px;         /* Độ rộng chuẩn như trong ảnh */
+  flex-shrink: 0;       /* Không bị bóp nghẹt khi màn hình nhỏ */
+  background: #fff;
+  border-radius: 8px;
+  height: fit-content;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Đổ bóng nhẹ cho đẹp */
+}
+
+/* 4. Vùng nội dung bên phải */
+.contentWrapper {
+  flex: 1;              /* Tự động chiếm hết phần diện tích còn lại */
+  min-width: 0;         /* Ngăn chặn việc vỡ layout do nội dung con */
+}
+
+/* 5. Header gồm Tiêu đề và Search */
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.title .count {
+  font-weight: 400;
+  color: #666;
+  font-size: 15px;
+  margin-left: 8px;
+}
+
+.searchBox {
+  width: 350px;         /* Chiều rộng search box */
+  transition: width 0.3s ease;
+}
+
+
+@media (max-width: 1200px) {
+  .mainContainer {
+    gap: 6px;          /* Thu hẹp khoảng cách các cột */
+  }
+  .sidebarWrapper {
+  width: calc(25% - 3px);       /* Sidebar co lại một chút */
+  }
+  .searchBox {
+    width: 280px;       /* Search box co lại để nhường chỗ cho tiêu đề */
+  }
+}
+
+/* Mốc Tablet dọc (Dưới 900px) */
+@media (max-width: 900px) {
+  .headerSection {
+    flex-direction: row; /* Vẫn giữ hàng ngang nhưng tiêu đề nhỏ lại */
+  }
+  .title {
+    font-size: 18px;
+  }
+  
+}
+
+
+@media (max-width: 760px) {
+ 
+  .mainContainer {
+    display: flex;
+    flex-direction: column; 
+  }
+
+
+  .sidebarWrapper {
+    
+    width: 100%;        /* Sidebar dàn hàng ngang hết màn hình */
+    margin-bottom: 10px;
+  }
+
+  .headerSection {
+    flex-direction: column; /* Tiêu đề và Search xếp chồng nhau */
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .searchBox {
+    width: 100%;        /* Search box chiếm 100% chiều ngang mobile */
+  }
+  
+  .title {
+    font-size: 19px;
+  }
+}

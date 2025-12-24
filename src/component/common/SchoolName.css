@@ -1,0 +1,31 @@
+.school-name-container {
+    display: inline-block;
+    margin-top: 24px;   /* tương đương my: 3 */
+    margin-bottom: 24px;
+}
+
+/* Style cho Icon của MUI */
+.school-icon {
+    color: #e31e24 !important;
+    font-size: 30px !important; /* Mặc định cho mobile (xs) */
+}
+
+/* Khi màn hình lớn hơn (md) - tương đương fontSize: { xs: 30, md: 40 } */
+@media (min-width: 900px) {
+    .school-icon {
+        font-size: 40px !important;
+    }
+}
+
+/* Style cho chữ tên trường */
+.school-title {
+    color: #e31e24 !important;
+    font-family: 'SVN-Poppins' !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid #e31e24; /* Đường gạch chân đỏ đậm */
+    padding-bottom: 4px; /* tương đương pb: 0.5 */
+    line-height: 1.2 !important;
+    margin: 0;
+}
