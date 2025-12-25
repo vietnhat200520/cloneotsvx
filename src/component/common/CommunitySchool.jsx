@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Grid, Button } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import AssignmentIcon from '@mui/icons-material/Assignment';
@@ -13,9 +13,10 @@ const CommunitySchool = () => {
         CỘNG ĐỒNG
       </Typography>
 
-      <Grid container spacing={3} classes={{ root: 'community-grid-root' }}>
+      {/* Thay thế Grid container bằng Box với CSS Grid */}
+      <Box className="community-grid-custom">
         {communityData.map((item) => (
-          <Grid item xs={12} md={4} key={item.id} classes={{ root: 'community-item-root' }}>
+          <Box className="community-item-custom" key={item.id}>
             <Box className="community-card">
               {/* Header của Card */}
               <Box className="card-header">
@@ -43,19 +44,18 @@ const CommunitySchool = () => {
 
                 <Button 
                   variant="contained" 
-                  classes={{ root: 'btn-join-root' }}
+                  className="btn-join-root" // Sử dụng className thay cho classes.root để đồng bộ
                   fullWidth
                 >
                   THAM GIA NGAY
                 </Button>
               </Box>
             </Box>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Box>
   );
 };
 
 export default CommunitySchool;
-

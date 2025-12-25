@@ -44,7 +44,7 @@ const ListcardSchool = () => {
             </Typography>
 
             {/* Grid hiển thị 4 cột */}
-            <Grid container spacing={3} classes={{ root: 'course-grid-root' }}>
+            <Grid container spacing={1} classes={{ root: 'course-grid-root' }}>
               {displayedCourses.map((course) => (
                 <Grid item xs={12} sm={6} md={3} key={course.id} classes={{ root: 'course-item-root' }}>
                   <CourseCard course={course} />

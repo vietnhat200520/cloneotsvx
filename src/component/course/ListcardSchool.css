@@ -10,7 +10,7 @@
 
 .branch-title {
   color: #1a3761 !important;
-  font-weight: 800 !important;
+  font-weight: 700 !important;
   margin-bottom: 25px !important;
 
   padding-left: 15px;
@@ -20,6 +20,7 @@
 /* Ghi đè Grid Root */
 .MuiGrid-root.course-grid-root {
   width: 100%;
+  max-width: 280px ;
   margin: 0 !important;
 }
 
@@ -35,7 +36,7 @@
   color: #1a3761 !important;
   text-transform: none !important;
   padding: 8px 30px !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   border-radius: 20px !important;
 }
 
@@ -49,8 +50,3 @@
   padding: 12px !important;
 }
 
-@media (max-width: 600px) {
-  .branch-title {
-    font-size: 1.2rem !important;
-  }
-}

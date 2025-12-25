@@ -11,10 +11,27 @@
   text-transform: uppercase;
 }
 
-/* Ghi đè Grid Root của MUI */
-.MuiGrid-root.community-grid-root {
+/* Thay thế Grid MUI bằng CSS Grid */
+.community-grid-custom {
   max-width: 1200px;
-  margin: 0 auto !important;
+  margin: 0 auto;
+  display: grid;
+  /* Chia 3 cột bằng nhau */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 24px; /* Khoảng cách giữa các item */
+}
+
+/* Responsive: Trên máy tính bảng 2 cột, điện thoại 1 cột */
+@media (max-width: 900px) {
+  .community-grid-custom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .community-grid-custom {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Card Container */
@@ -27,11 +44,16 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
 }
 
-/* Phần Header màu xanh nhạt */
+.community-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Header & Body giữ nguyên như cũ của bạn */
 .card-header {
-  background-color: #e8f0fe; /* Màu xanh lơ nhạt */
+  background-color: #e8f0fe;
   padding: 25px 20px;
   display: flex;
   align-items: center;
@@ -52,7 +74,6 @@
   line-height: 1.4 !important;
 }
 
-/* Phần Body màu trắng */
 .card-body {
   padding: 25px 20px;
   flex-grow: 1;
@@ -82,24 +103,18 @@
   color: #333;
 }
 
-/* Ghi đè nút bấm của MUI */
-.MuiButton-root.btn-join-root {
-  background-color: #e31a27 !important; /* Màu đỏ thương hiệu */
+/* Custom Button */
+.btn-join-root {
+  background-color: #e31a27 !important;
   color: white !important;
   font-weight: 700 !important;
   border-radius: 8px !important;
   padding: 10px !important;
   margin-top: 15px !important;
   box-shadow: none !important;
+  text-transform: uppercase !important;
 }
 
-.MuiButton-root.btn-join-root:hover {
+.btn-join-root:hover {
   background-color: #c41621 !important;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .MuiGrid-root.community-item-root {
-    padding: 10px;
-  }
 }

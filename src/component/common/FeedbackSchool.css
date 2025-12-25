@@ -69,4 +69,92 @@
   .feedback-card {
     height: 350px;
   }
+}.feedback-section {
+  padding: 60px 20px;
+  background-color: #f8fbff;
+  text-align: center;
+}
+
+.feedback-title {
+  color: #1a3761 !important;
+  font-weight: 800 !important;
+  margin-bottom: 40px !important;
+  text-transform: uppercase;
+}
+
+/* Layout chia 4 cột thay thế cho Grid MUI */
+.feedback-grid-custom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Chia đúng 4 cột */
+  gap: 20px; /* Khoảng cách giữa các card */
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Responsive cho layout */
+@media (max-width: 1024px) {
+  .feedback-grid-custom {
+    grid-template-columns: repeat(2, 1fr); /* Tablet hiện 2 cột */
+  }
+}
+
+@media (max-width: 600px) {
+  .feedback-grid-custom {
+    grid-template-columns: 1fr; /* Mobile hiện 1 cột */
+  }
+}
+
+/* Card chứa ảnh screenshot */
+.feedback-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  height: 480px; 
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.feedback-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Pagination Styling */
+.pagination-wrapper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Custom các nút số của MUI Pagination */
+.pagination-root .MuiPaginationItem-root {
+  background-color: #d1d1d1 !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+}
+
+/* Khi hover hoặc đang ở trang hiện tại */
+.pagination-root .Mui-selected {
+  background-color: #e31a27 !important; /* Màu đỏ thương hiệu */
+  color: #fff !important;
+}
+
+/* Ẩn các icon mũi tên Previous/Next nếu bạn muốn chỉ hiện số */
+.pagination-root .MuiPaginationItem-icon {
+  display: none !important;
+}
+
+/* Responsive cho card trên mobile */
+@media (max-width: 900px) {
+  .feedback-card {
+    height: 350px;
+  }
 }

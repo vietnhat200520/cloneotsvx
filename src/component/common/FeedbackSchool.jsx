@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
-import { Box, Typography, Grid, Pagination } from '@mui/material';
+import { Box, Typography, Pagination } from '@mui/material';
 import { feedbackData } from '../../data';
 import './FeedbackSchool.css';
 
 const FeedbackSchool = () => {
   const [page, setPage] = useState(1);
-  const itemsPerPage = 4; // Hiển thị 4 ảnh mỗi trang như yêu cầu
+  const itemsPerPage = 4; // Hiển thị cố định 4 ảnh trên 1 hàng (1 trang)
 
   const handleChangePage = (event, value) => {
     setPage(value);
     // Cuộn nhẹ lên đầu phần feedback khi chuyển trang
-    window.scrollTo({ behavior: 'smooth', top: event.target.offsetTop - 100 });
+    const section = document.querySelector('.feedback-section');
+    if (section) {
+      window.scrollTo({ behavior: 'smooth', top: section.offsetTop - 50 });
+    }
   };
 
   // Logic phân trang
@@ -24,22 +27,24 @@ const FeedbackSchool = () => {
         PHẢN HỒI CỦA HỌC VIÊN KỲ TRƯỚC
       </Typography>
 
-      <Grid container spacing={2} classes={{ root: 'feedback-grid-root' }}>
+      {/* Thay thế Grid bằng CSS Grid */}
+      <Box className="feedback-grid-custom">
         {currentItems.map((item) => (
-          <Grid item xs={12} sm={6} md={3} key={item.id} classes={{ root: 'feedback-item-root' }}>
+          <Box className="feedback-item-custom" key={item.id}>
             <Box className="feedback-card">
               <img src={item.image} alt={`Feedback ${item.id}`} className="feedback-img" />
             </Box>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
 
       <Box className="pagination-wrapper">
         <Pagination 
           count={Math.ceil(feedbackData.length / itemsPerPage)} 
           page={page}
           onChange={handleChangePage}
-          classes={{ root: 'pagination-root' }}
+          className="pagination-root" // Sử dụng className trực tiếp
+          shape="circular"
         />
       </Box>
     </Box>
