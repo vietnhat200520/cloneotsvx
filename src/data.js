@@ -369,7 +369,75 @@ export const coursesData = [
         color: "#16a34a",
         school: "tonducthang",
         branch: "Kỹ thuật phần mềm"
-      }
+      },
+      {
+      id: 22,
+      title: "TOÁN DÀNH CHO KINH TẾ",
+      description: "Cam kết chất lượng học, học theo logic, dễ hiểu.",
+      image: "https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F588079748-1656554535424-bansaocuacoverkhoahochuce9.jpg&w=1920&q=75",
+      rating: 342,
+      price: "38,000 VNĐ",
+      color: "#10b981",
+      school: "neu",
+      branch: "Kinh tế vi mô"
+    },
+      {
+      id: 23,
+      title: "TOÁN DÀNH CHO KINH TẾ",
+      description: "Cam kết chất lượng học, học theo logic, dễ hiểu.",
+      image: "https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F588079748-1656554535424-bansaocuacoverkhoahochuce9.jpg&w=1920&q=75",
+      rating: 342,
+      price: "38,000 VNĐ",
+      color: "#10b981",
+      school: "neu",
+      branch: "Kinh tế vi mô"
+    }
+    ,
+      {
+      id: 24,
+      title: "TOÁN DÀNH CHO KINH TẾ",
+      description: "Cam kết chất lượng học, học theo logic, dễ hiểu.",
+      image: "https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F588079748-1656554535424-bansaocuacoverkhoahochuce9.jpg&w=1920&q=75",
+      rating: 342,
+      price: "38,000 VNĐ",
+      color: "#10b981",
+      school: "neu",
+      branch: "Kinh tế vi mô"
+    },
+      {
+      id: 25,
+      title: "TOÁN DÀNH CHO KINH TẾ",
+      description: "Cam kết chất lượng học, học theo logic, dễ hiểu.",
+      image: "https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F588079748-1656554535424-bansaocuacoverkhoahochuce9.jpg&w=1920&q=75",
+      rating: 342,
+      price: "38,000 VNĐ",
+      color: "#10b981",
+      school: "neu",
+      branch: "Kinh tế vi mô"
+    }
+    ,
+      {
+      id: 26,
+      title: "TOÁN DÀNH CHO KINH TẾ",
+      description: "Cam kết chất lượng học, học theo logic, dễ hiểu.",
+      image: "https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F588079748-1656554535424-bansaocuacoverkhoahochuce9.jpg&w=1920&q=75",
+      rating: 342,
+      price: "38,000 VNĐ",
+      color: "#10b981",
+      school: "neu",
+      branch: "Kinh tế vi mô"
+    },
+      {
+      id: 27,
+      title: "TOÁN DÀNH CHO KINH TẾ",
+      description: "Cam kết chất lượng học, học theo logic, dễ hiểu.",
+      image: "https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F588079748-1656554535424-bansaocuacoverkhoahochuce9.jpg&w=1920&q=75",
+      rating: 342,
+      price: "38,000 VNĐ",
+      color: "#10b981",
+      school: "neu",
+      branch: "Kinh tế vi mô"
+    }
   ];
   
 export const coursecountData = 786;

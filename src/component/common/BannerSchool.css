@@ -3,19 +3,21 @@
 /* Container chính của Banner */
 .banner-school-root {
     position: relative;
+    max-width: 1200px;
     width: 100%;
-    height: 250px; /* Bạn có thể điều chỉnh chiều cao tùy ý */
+    margin: 0 auto;
+    height: 250px; 
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0;
+    background-color: #fffcfc;
 }
 
 /* Style cho hình nền */
 .banner-school-image {
     position: absolute;
-    top: 0;
+    top: 50px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -23,37 +25,4 @@
     z-index: 1;
 }
 
-/* Lớp phủ mờ để chữ hiển thị rõ hơn (nếu cần) */
-.banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.4); /* Làm sáng ảnh giống trong mẫu */
-    z-index: 2;
-}
 
-/* Nội dung text bên trong */
-.banner-content-root {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    color: #333;
-    padding: 20px;
-}
-
-.school-name-text {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-.school-sub-text {
-    font-size: 1.5rem;
-    font-family: 'Dancing Script', cursive, serif; /* Sử dụng font script giống ảnh */
-    margin-top: 10px;
-    font-style: italic;
-}

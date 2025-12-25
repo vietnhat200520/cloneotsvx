@@ -13,6 +13,7 @@ import ButtonChat from "../component/common/ButtonChat.jsx";
 import { coursesData } from "../data.js";
 import "./SchoolPage.css";
 import "../component/course/ListcardSchool.css";
+import "../component/common/FeedbackSchool.css";
 export default function SchoolPage() {
 const SCHOOL_ID = "neu";
 
@@ -22,7 +23,7 @@ const SCHOOL_ID = "neu";
   const [query, setQuery] = useState("");
 
   return (
-    <Box className="schoolpage-root">
+    <Box >
       <Header />
       
       <BannerSchool schoolId={SCHOOL_ID} />
@@ -39,15 +40,15 @@ const SCHOOL_ID = "neu";
         </Box>
       </Box>
 
-      <Box className="schoolpage-section">
+      <Box >
         <ListcardSchool />
       </Box>
 
-      <Box className="schoolpage-section">
+      <Box >
         <FeedbackSchool />
       </Box>
 
-      <Box className="schoolpage-section">
+      <Box >
         <StatsSchool />
       </Box>
 

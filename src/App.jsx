@@ -11,17 +11,9 @@ import SchoolPage from './page/SchoolPage.jsx';
 // Tạo một theme với các breakpoint theo yêu cầu
 const theme = createTheme({
   typography: {
-    fontFamily: ['Arial', 'sans-serif'].join(','),
+    fontFamily: ['SVN-Poppins', 'sans-serif'].join(','),
   },
-  breakpoints: {
-    values: {
-      xs: 0, // 1 thẻ/hàng (width < 493px)
-      sm: 493, // 2 thẻ/hàng (width 493px - 779px)
-      md: 780, // 3 thẻ/hàng (width ≥ 780px)
-      lg: 1000,
-      xl: 1536,
-    },
-  },
+
 });
 
 function App() {
