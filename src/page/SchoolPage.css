@@ -1,0 +1,53 @@
+import './ListcardSchool.css';
+
+.schoolpage-root {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8faff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+}
+
+.schoolpage-nameandsearch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 300px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.schoolpage-search {
+  width: 100%;
+  max-width: 420px;
+}
+
+.schoolpage-section {
+  width: 100%;
+  margin: 0 auto 32px auto;
+}
+
+.button-chat {
+  position: fixed !important;
+  right: 32px;
+  bottom: 32px;
+  z-index: 1200;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 600px) {
+  .schoolpage-nameandsearch {
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+  .schoolpage-search {
+    max-width: 100%;
+    padding: 0 8px;
+  }
+  .button-chat {
+    right: 12px;
+    bottom: 12px;
+  }
+}

@@ -5,9 +5,16 @@ import CourseList from "../component/course/CourseList.jsx";
 import { categoriesData, coursesData } from "../data.js";
 import  SchoolName  from "../component/common/SchoolName.jsx";
 import  ButtonChat  from "../component/common/ButtonChat.jsx";
+import  StatsSchool  from "../component/common/StatsSchool.jsx";
+import  CommunitySchool  from "../component/common/CommunitySchool.jsx";
+import  FeedbackSchool  from "../component/common/FeedbackSchool.jsx";
+import  BannerSchool  from "../component/common/BannerSchool.jsx";
+import  ListcardSchool  from "../component/course/ListcardSchool.jsx";
 export default function CoursePage() {
+
   const currentSchoolId = "xaydung";
   return (
+
     <Container
       maxWidth="xl"
       sx={{
@@ -17,7 +24,11 @@ export default function CoursePage() {
         width: "100%",
         px: { xs: 2, sm: 3 },
       }}
-    >
+    >    <Box><section >
+        <StatsSchool />
+      </section></Box>
+      <Box><CommunitySchool/></Box>
+      <Box><FeedbackSchool/></Box>
       {/* Danh mục khóa học (Sidebar) thêm vào bên trái */}
       <Box
         sx={{
@@ -31,15 +42,16 @@ export default function CoursePage() {
       >
         <Sidebar categories={categoriesData} />
       </Box>
+  
       <Box>
       
       {/* Chỉ cần truyền id, component sẽ tự tìm tên "ĐẠI HỌC XÂY DỰNG" */}
       <SchoolName schoolId={currentSchoolId} />
-      
+         <BannerSchool schoolId={currentSchoolId} />
       {/* Hiển thị các nội dung khác của trường */}
     </Box>
 <Box>
-  <ButtonChat link="">
+  <ButtonChat link="#">
                 Nhắn tin cho ôn thi sinh viên 
               </ButtonChat>
 </Box>
@@ -54,6 +66,7 @@ export default function CoursePage() {
           overflow: "hidden",
         }}
       >
+        
         <Box sx={{ mb: 3 }}>
           <Typography variant="h4" sx={{ fontWeight: 700 }}>
             Danh sách khóa học
@@ -64,6 +77,7 @@ export default function CoursePage() {
         </Box>
         <CourseList courses={coursesData} />
       </Box>
+      <Box><ListcardSchool /></Box>
     </Container>
   );
 }

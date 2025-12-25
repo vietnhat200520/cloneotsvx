@@ -1,0 +1,56 @@
+.list-card-section {
+  padding: 40px 20px;
+  background-color: #f9fbff;
+}
+
+.branch-group {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+}
+
+.branch-title {
+  color: #1a3761 !important;
+  font-weight: 800 !important;
+  margin-bottom: 25px !important;
+  border-left: 5px solid #e31a27; /* Vạch đỏ trang trí bên trái */
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
+/* Ghi đè Grid Root */
+.MuiGrid-root.course-grid-root {
+  width: 100%;
+  margin: 0 !important;
+}
+
+/* Nút Xem thêm */
+.load-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.MuiButton-root.btn-load-more-root {
+  border: 1px solid #1a3761 !important;
+  color: #1a3761 !important;
+  text-transform: none !important;
+  padding: 8px 30px !important;
+  font-weight: 600 !important;
+  border-radius: 20px !important;
+}
+
+.MuiButton-root.btn-load-more-root:hover {
+  background-color: #1a3761 !important;
+  color: #fff !important;
+}
+
+/* Style cho CourseCard khi nằm trong Grid này */
+.course-item-root {
+  padding: 12px !important;
+}
+
+@media (max-width: 600px) {
+  .branch-title {
+    font-size: 1.2rem !important;
+  }
+}

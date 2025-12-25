@@ -1,0 +1,72 @@
+.stats-container {
+  padding: 60px 20px;
+  background-color: #f8faff; /* Màu nền nhạt như ảnh */
+  text-align: center;
+}
+
+.stats-header {
+  margin-bottom: 50px;
+}
+
+.stats-title-top {
+  color: #2c3e50;
+  font-weight: 600 !important;
+  letter-spacing: 1px;
+}
+
+.stats-title-main {
+  color: #00468c; /* Màu xanh đậm thương hiệu */
+  font-weight: 700 !important;
+  margin-top: 10px !important;
+}
+
+/* Custom Grid Root */
+.stats-grid-root {
+  max-width: 1200px;
+  margin: 0 auto !important;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background-color: #d6e4f0; /* Màu nền tròn của icon */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.icon-wrapper svg {
+  font-size: 35px;
+  color: #00468c;
+}
+
+.stat-value {
+  color: #00468c;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+}
+
+.stat-label {
+  color: #555;
+  font-weight: 500 !important;
+}
+
+/* Responsive tinh chỉnh thêm nếu cần */
+@media (max-width: 600px) {
+  .stats-title-main {
+    font-size: 1.5rem !important;
+  }
+}

@@ -1,0 +1,72 @@
+.feedback-section {
+  padding: 60px 20px;
+  background-color: #f8fbff;
+  text-align: center;
+}
+
+.feedback-title {
+  color: #1a3761 !important;
+  font-weight: 800 !important;
+  margin-bottom: 40px !important;
+  text-transform: uppercase;
+}
+
+/* Ghi đè Grid Root */
+.MuiGrid-root.feedback-grid-root {
+  max-width: 1200px;
+  margin: 0 auto !important;
+  width: 100%;
+}
+
+/* Card chứa ảnh screenshot tin nhắn */
+.feedback-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  height: 480px; /* Độ cao cố định để các cột bằng nhau */
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.feedback-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center; /* Luôn hiển thị từ đỉnh tin nhắn xuống */
+}
+
+/* Pagination Styling */
+.pagination-wrapper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Selector .Mui...-root cho Pagination */
+.MuiPagination-root.pagination-root .MuiPaginationItem-root {
+  background-color: #d1d1d1;
+  color: #fff;
+  font-weight: 700;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin: 0 6px;
+}
+
+/* Nút đang hoạt động (Màu đỏ thương hiệu) */
+.MuiPagination-root.pagination-root .Mui-selected {
+  background-color: #e31a27 !important;
+  color: #fff !important;
+}
+
+/* Ẩn icon mũi tên để giống ảnh mẫu (chỉ hiện số) */
+.MuiPagination-root.pagination-root .MuiPaginationItem-icon {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .feedback-card {
+    height: 350px;
+  }
+}

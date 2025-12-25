@@ -1,86 +1,138 @@
+export const feedbackData = [
+  { id: 1, image: "https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2Ffeedback%2Fhuce%2F1.png&w=3840&q=75" },
+  { id: 2, image: "https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2Ffeedback%2Fhuce%2F2.png&w=3840&q=75" },
+  { id: 3, image: "https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2Ffeedback%2Fhuce%2F3.png&w=3840&q=75" },
+  { id: 4, image: "https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2Ffeedback%2Fhuce%2F4.png&w=3840&q=75" },
+  { id: 5, image: "https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2Ffeedback%2Fhuce%2F5.png&w=3840&q=75" },
+  { id: 6, image: "https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2Ffeedback%2FHUCE-6.png&w=3840&q=75" },
+  { id: 7, image: "https://onthisinhvien.com/images/feedback/fb-7.png" },
+  { id: 8, image: "https://onthisinhvien.com/images/feedback/fb-8.png" },
+  { id: 9, image: "https://onthisinhvien.com/images/feedback/fb-9.png" },
+  { id: 10, image: "https://onthisinhvien.com/images/feedback/fb-10.png" },
+  { id: 11, image: "https://onthisinhvien.com/images/feedback/fb-11.png" },
+  { id: 12, image: "https://onthisinhvien.com/images/feedback/fb-12.png" },
+];
+export const communityData = [
+  {
+    id: 1,
+    title: "GÓC ÔN THI HUCE - THI KHÔNG QUA, XOÁ GROUP",
+    members: "25.9k",
+    rating: "****",
+    link: "#"
+  },
+  {
+    id: 2,
+    title: "OTSV HUCE",
+    members: "7.9k",
+    rating: "18",
+    link: "#"
+  },
+  {
+    id: 3,
+    title: "GROUP GÓC REVIEW NHÀ TRỌ BÁCH KINH XÂY",
+    members: "107.9k",
+    rating: "****",
+    link: "#"
+  }
+];
 export const categoriesData = [
-    {
-      id: "neu",
-      school: "ĐẠI HỌC KINH TẾ QUỐC DÂN",
-      branch: ["Kế toán", "Kinh tế vi mô", "Xác suất thống kê", "Nguyên lý kế toán"]
-    },
-    {
-      id: "xaydung",
-      school: "ĐẠI HỌC XÂY DỰNG",
-      branch: ["Cơ học kết cấu", "Sức bền vật liệu"]
-    },
-    {
-      id: "ktphcm",
-      school: "ĐẠI HỌC KINH TẾ THÀNH PHỐ HCM",
-      branch: ["Marketing", "Quản trị kinh doanh"]
-    },
-    {
-      id: "kinhteluat",
-      school: "ĐẠI HỌC KINH TẾ - LUẬT HCM",
-      branch: ["Luật kinh tế", "Luật dân sự"]
-    },
-    {
-      id: "nganhang",
-      school: "ĐẠI HỌC NGÂN HÀNG THÀNH PHỐ HCM",
-      branch: ["Tài chính ngân hàng", "Kế toán"]
-    },
-    {
-      id: "thuongmai",
-      school: "ĐẠI HỌC THƯƠNG MẠI",
-      branch: ["Thương mại điện tử", "Quản trị marketing"]
-    },
-    {
-      id: "bachkhoa",
-      school: "ĐH BÁCH KHOA HÀ NỘI",
-      branch: ["Cơ điện tử", "Công nghệ thông tin"]
-    },
-    {
-      id: "bcvthong",
-      school: "HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG",
-      branch: ["Viễn thông", "An toàn thông tin"]
-    },
-    {
-      id: "tonducthang",
-      school: "ĐẠI HỌC TÔN ĐỨC THẮNG",
-      branch: ["Kỹ thuật phần mềm", "Khoa học máy tính"]
-    },
-    {
-      id: "taichinh",
-      school: "ĐẠI HỌC TÀI CHÍNH - MARKETING",
-      branch: ["Tài chính doanh nghiệp", "Marketing số"]
-    }
-    ,
-    {
-      id: "ctu",
-      school: "ĐẠI HỌC CẦN THƠ",
-      branch: ["Cơ khí", "Công nghệ thông tin"]
-    },
-    {
-      id: "dntu",
-      school: "ĐẠI HỌC ĐÀ NẴNG",
-      branch: ["Kỹ thuật xây dựng", "Quản trị kinh doanh"]
-    },
-    {
-      id: "hue",
-      school: "ĐẠI HỌC HUẾ",
-      branch: ["Y học", "Dược"]
-    },
-    {
-      id: "hanoi_sp",
-      school: "ĐẠI HỌC SƯ PHẠM HÀ NỘI",
-      branch: ["Giáo dục học", "Tâm lý học"]
-    },
-    {
-      id: "fpt",
-      school: "ĐẠI HỌC FPT",
-      branch: ["Khoa học máy tính", "Truyền thông đa phương tiện"]
-    },
-    {
-      id: "ftu",
-      school: "ĐẠI HỌC NGOẠI THƯƠNG",
-      branch: ["Kinh tế đối ngoại", "Quản trị kinh doanh"]
-    }
-  ];
+  {
+    id: "neu",
+    school: "ĐẠI HỌC KINH TẾ QUỐC DÂN",
+    branch: ["Kế toán", "Kinh tế vi mô", "Xác suất thống kê", "Nguyên lý kế toán"],
+    image: "https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fbanner%2Fneu.jpg&w=1920&q=75"
+  },
+  {
+    id: "xaydung",
+    school: "ĐẠI HỌC XÂY DỰNG",
+    branch: ["Cơ học kết cấu", "Sức bền vật liệu"],
+    image: "https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fbanner%2FhuCE.jpg&w=1920&q=75"
+  },
+  {
+    id: "ktphcm",
+    school: "ĐẠI HỌC KINH TẾ THÀNH PHỐ HCM",
+    branch: ["Marketing", "Quản trị kinh doanh"],
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    id: "kinhteluat",
+    school: "ĐẠI HỌC KINH TẾ - LUẬT HCM",
+    branch: ["Luật kinh tế", "Luật dân sự"],
+    image: "https://images.unsplash.com/photo-1589241062272-c0a000072dfa?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    id: "nganhang",
+    school: "ĐẠI HỌC NGÂN HÀNG THÀNH PHỐ HCM",
+    branch: ["Tài chính ngân hàng", "Kế toán"],
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    id: "thuongmai",
+    school: "ĐẠI HỌC THƯƠNG MẠI",
+    branch: ["Thương mại điện tử", "Quản trị marketing"],
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    id: "bachkhoa",
+    school: "ĐH BÁCH KHOA HÀ NỘI",
+    branch: ["Cơ điện tử", "Công nghệ thông tin"],
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    id: "bcvthong",
+    school: "HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG",
+    branch: ["Viễn thông", "An toàn thông tin"],
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    id: "tonducthang",
+    school: "ĐẠI HỌC TÔN ĐỨC THẮNG",
+    branch: ["Kỹ thuật phần mềm", "Khoa học máy tính"],
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    id: "taichinh",
+    school: "ĐẠI HỌC TÀI CHÍNH - MARKETING",
+    branch: ["Tài chính doanh nghiệp", "Marketing số"],
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    id: "ctu",
+    school: "ĐẠI HỌC CẦN THƠ",
+    branch: ["Cơ khí", "Công nghệ thông tin"],
+    image: "https://images.unsplash.com/photo-1498243639359-f75cb752ee47?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    id: "dntu",
+    school: "ĐẠI HỌC ĐÀ NẴNG",
+    branch: ["Kỹ thuật xây dựng", "Quản trị kinh doanh"],
+    image: "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    id: "hue",
+    school: "ĐẠI HỌC HUẾ",
+    branch: ["Y học", "Dược"],
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    id: "hanoi_sp",
+    school: "ĐẠI HỌC SƯ PHẠM HÀ NỘI",
+    branch: ["Giáo dục học", "Tâm lý học"],
+    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    id: "fpt",
+    school: "ĐẠI HỌC FPT",
+    branch: ["Khoa học máy tính", "Truyền thông đa phương tiện"],
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    id: "ftu",
+    school: "ĐẠI HỌC NGOẠI THƯƠNG",
+    branch: ["Kinh tế đối ngoại", "Quản trị kinh doanh"],
+    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=500&auto=format&fit=crop"
+  }
+];
 // Dữ liệu khóa học
 export const coursesData = [
     {

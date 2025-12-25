@@ -1,0 +1,105 @@
+.community-wrapper {
+  padding: 60px 20px;
+  background-color: #f1f6fa;
+  text-align: center;
+}
+
+.community-title {
+  color: #1a3761 !important;
+  font-weight: 800 !important;
+  margin-bottom: 40px !important;
+  text-transform: uppercase;
+}
+
+/* Ghi đè Grid Root của MUI */
+.MuiGrid-root.community-grid-root {
+  max-width: 1200px;
+  margin: 0 auto !important;
+}
+
+/* Card Container */
+.community-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e0e7ff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Phần Header màu xanh nhạt */
+.card-header {
+  background-color: #e8f0fe; /* Màu xanh lơ nhạt */
+  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 100px;
+}
+
+.fb-icon {
+  font-size: 45px !important;
+  color: #1877f2;
+}
+
+.group-name {
+  color: #1a3761;
+  font-weight: 700 !important;
+  text-align: left;
+  font-size: 0.95rem !important;
+  line-height: 1.4 !important;
+}
+
+/* Phần Body màu trắng */
+.card-body {
+  padding: 25px 20px;
+  flex-grow: 1;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.info-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+}
+
+.info-left svg {
+  font-size: 20px;
+  color: #555;
+}
+
+.info-right {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Ghi đè nút bấm của MUI */
+.MuiButton-root.btn-join-root {
+  background-color: #e31a27 !important; /* Màu đỏ thương hiệu */
+  color: white !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  margin-top: 15px !important;
+  box-shadow: none !important;
+}
+
+.MuiButton-root.btn-join-root:hover {
+  background-color: #c41621 !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .MuiGrid-root.community-item-root {
+    padding: 10px;
+  }
+}

@@ -4,6 +4,7 @@ import Sidebar from "../component/layout/Sidebar.jsx";
 import CourseList from "../component/course/CourseList.jsx";
 import Search from "../component/common/Search.jsx";
 import Footer from "../component/layout/Footer.jsx";
+import Header from "../component/layout/Header.jsx";
 import Banner from "../component/common/Banner.jsx";
 import { categoriesData, coursesData, bannerData } from "../data.js";
 import  ButtonChat  from "../component/common/ButtonChat.jsx";
@@ -14,6 +15,8 @@ export default function HomePage() {
   const [filtered, setFiltered] = useState(coursesData || []);
 
   return (
+    <Box>
+      <Header/>
     <Box className="homepage-root">
       <Banner slidesData={bannerData} />
       
@@ -51,6 +54,7 @@ export default function HomePage() {
       </Container>
 
       <Footer />
+    </Box>
     </Box>
   );
 }
