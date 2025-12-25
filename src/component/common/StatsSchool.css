@@ -1,6 +1,6 @@
 .stats-container {
   padding: 60px 20px;
-  background-color: #f8faff; /* Màu nền nhạt như ảnh */
+  background-color: #f8faff;
   text-align: center;
 }
 
@@ -15,15 +15,36 @@
 }
 
 .stats-title-main {
-  color: #00468c; /* Màu xanh đậm thương hiệu */
+  color: #00468c;
   font-weight: 700 !important;
   margin-top: 10px !important;
 }
 
-/* Custom Grid Root */
-.stats-grid-root {
+/* Thay thế stats-grid-root bằng CSS Grid chia 4 cột */
+.stats-grid-custom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Chia 4 cột bằng nhau */
+  gap: 30px; /* Khoảng cách giữa các cột */
   max-width: 1200px;
-  margin: 0 auto !important;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .stats-grid-custom {
+    grid-template-columns: repeat(2, 1fr); /* Tablet hiện 2 cột mỗi hàng */
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid-custom {
+    grid-template-columns: 1fr; /* Mobile hiện 1 cột */
+  }
+  
+  .stats-title-main {
+    font-size: 1.5rem !important;
+  }
 }
 
 .stat-card {
@@ -31,6 +52,7 @@
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s ease;
+  padding: 20px;
 }
 
 .stat-card:hover {
@@ -40,7 +62,7 @@
 .icon-wrapper {
   width: 80px;
   height: 80px;
-  background-color: #d6e4f0; /* Màu nền tròn của icon */
+  background-color: #d6e4f0;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -62,11 +84,4 @@
 .stat-label {
   color: #555;
   font-weight: 500 !important;
-}
-
-/* Responsive tinh chỉnh thêm nếu cần */
-@media (max-width: 600px) {
-  .stats-title-main {
-    font-size: 1.5rem !important;
-  }
 }

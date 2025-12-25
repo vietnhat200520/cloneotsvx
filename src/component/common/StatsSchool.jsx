@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Typography, Grid } from '@mui/material';
-import SchoolIcon from '@mui/icons-material/School'; // Bạn có thể thay bằng icon tương ứng
+import { Box, Typography } from '@mui/material';
+import SchoolIcon from '@mui/icons-material/School';
 import GroupsIcon from '@mui/icons-material/Groups';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
@@ -21,19 +21,18 @@ const StatsSchool = () => {
         <Typography variant="h4" className="stats-title-main">THAY ĐỔI CÁCH HỌC VÀ THI CỦA BẠN</Typography>
       </Box>
 
-      <Grid container spacing={4} justifyContent="center" classes={{ root: 'stats-grid-root' }}>
+      {/* Sử dụng Box với CSS Grid thay cho Grid MUI */}
+      <Box className="stats-grid-custom">
         {statsData.map((item) => (
-          <Grid item xs={12} sm={6} md={3} key={item.id} classes={{ root: 'stats-item-root' }}>
-            <Box className="stat-card">
-              <Box className="icon-wrapper">
-                {item.icon}
-              </Box>
-              <Typography variant="h4" className="stat-value">{item.value}</Typography>
-              <Typography variant="body1" className="stat-label">{item.label}</Typography>
+          <Box className="stat-card" key={item.id}>
+            <Box className="icon-wrapper">
+              {item.icon}
             </Box>
-          </Grid>
+            <Typography variant="h4" className="stat-value">{item.value}</Typography>
+            <Typography variant="body1" className="stat-label">{item.label}</Typography>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Box>
   );
 };
