@@ -1,11 +1,13 @@
 import React, { useState, useRef } from 'react';
-import { Button, Menu, MenuItem, Box, Link } from '@mui/material';
+import { Button, Menu, MenuItem, Box, Typography } from '@mui/material'; 
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './HoverMenu.css';
 
 const HoverMenu = ({ items = [], buttonLabel = "KHOÁ HỌC", baseHref = '#' }) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const timeoutRef = useRef(null);
     const open = Boolean(anchorEl);
+    const navigate = useNavigate(); // Khởi tạo hook điều hướng
 
     const handleMouseEnter = (event) => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -22,6 +24,12 @@ const HoverMenu = ({ items = [], buttonLabel = "KHOÁ HỌC", baseHref = '#' }) 
         setAnchorEl(null);
     };
 
+    // Hàm xử lý chuyển trang
+    const handleItemClick = (path) => {
+        navigate(path);
+        handleMenuClose();
+    };
+
     return (
         <Box 
             onMouseEnter={handleMouseEnter} 
@@ -29,9 +37,8 @@ const HoverMenu = ({ items = [], buttonLabel = "KHOÁ HỌC", baseHref = '#' }) 
             sx={{ display: 'inline-block', position: 'relative' }} 
         >
             <Button
-                // Ghi đè lớp root của Button
-                classes={{ root:  'hovermenu-button' }}
-                onClick={() => window.location.href = baseHref}
+                classes={{ root: 'hovermenu-button' }}
+                onClick={() => navigate(baseHref)} // Dùng navigate thay vì window.location
             >
                 {buttonLabel}
             </Button>
@@ -49,12 +56,10 @@ const HoverMenu = ({ items = [], buttonLabel = "KHOÁ HỌC", baseHref = '#' }) 
                 sx={{ pointerEvents: 'none' }} 
                 slotProps={{
                     paper: { 
-                        // Sử dụng classes.root cho Paper (khung menu)
                         classes: { root: 'hovermenu-paper' },
                         sx: { pointerEvents: 'auto' } 
                     },
                     list: { 
-                        // Sử dụng classes.root cho List (danh sách menu)
                         classes: { root: 'hovermenu-list' } 
                     }
                 }}
@@ -63,18 +68,17 @@ const HoverMenu = ({ items = [], buttonLabel = "KHOÁ HỌC", baseHref = '#' }) 
                     <MenuItem 
                         key={index} 
                         disableRipple
-                        onClick={handleMenuClose}
-                        // Ghi đè lớp root của MenuItem
+                        // Khi click vào item thì gọi hàm navigate
+                        onClick={() => handleItemClick(item.href)}
                         classes={{ root: 'hovermenu-item' }}
                     >
-                        <Link 
-                            href={item.href} 
-                            underline="none" 
-                            // Link là component đơn giản, vẫn dùng className hoặc sx là chuẩn nhất
-                            classes={{ root: 'hovermenu-link' }}
+                        {/* Thay Link bằng Typography để tránh xung đột hành vi click */}
+                        <Typography 
+                            className="hovermenu-link"
+                            sx={{ cursor: 'pointer', width: '100%' }}
                         >
                             {item.label}
-                        </Link>
+                        </Typography>
                     </MenuItem>
                 ))}
             </Menu>

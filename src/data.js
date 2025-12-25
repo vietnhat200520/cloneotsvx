@@ -442,7 +442,7 @@ export const coursesData = [
   
 export const coursecountData = 786;
 export const courseItems = [
-    { label: 'ĐẠI HỌC KINH TẾ QUỐC DÂN', href: '/khoa-hoc/neu' },
+    { label: 'ĐẠI HỌC KINH TẾ QUỐC DÂN', href: '/schools' },
     { label: 'ĐẠI HỌC XÂY DỰNG', href: '/khoa-hoc/huce' },
     { label: 'ĐẠI HỌC KINH TẾ THÀNH PHỐ HCM', href: '/khoa-hoc/ueh' },
     { label: 'ĐẠI HỌC KINH TẾ - LUẬT HCM', href: '/khoa-hoc/uel' },
