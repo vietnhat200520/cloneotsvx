@@ -5,10 +5,10 @@ import CourseCard from './CourseCard';
 import './ListcardSchool.css';
 
 const ListcardSchool = () => {
-  // 1. Lọc dữ liệu trường NEU
+  
   const neuCourses = coursesData.filter(course => course.school === "neu");
 
-  // 2. Nhóm dữ liệu theo Branch
+
   const groupedCourses = neuCourses.reduce((acc, course) => {
     const branch = course.branch || "Khác";
     if (!acc[branch]) acc[branch] = [];
@@ -16,8 +16,7 @@ const ListcardSchool = () => {
     return acc;
   }, {});
 
-  // 3. State quản lý số lượng hiển thị cho từng Branch
-  // Cấu trúc: { "Kế toán": 8, "Kinh tế vi mô": 8 }
+  
   const [visibleCounts, setVisibleCounts] = useState(
     Object.keys(groupedCourses).reduce((acc, key) => ({ ...acc, [key]: 8 }), {})
   );
@@ -38,19 +37,19 @@ const ListcardSchool = () => {
 
         return (
           <Box key={branchName} className="branch-group">
-            {/* Tiêu đề Branch */}
+       
             <Typography variant="h5" className="branch-title">
               {branchName.toUpperCase()} ({coursesInBranch.length} KHOÁ)
             </Typography>
 
             {/* Grid hiển thị 4 cột */}
-            <Grid container spacing={1} classes={{ root: 'course-grid-root' }}>
+            <Box className="course-grid-root">
               {displayedCourses.map((course) => (
-                <Grid item xs={12} sm={6} md={3} key={course.id} classes={{ root: 'course-item-root' }}>
+                <Box  key={course.id} className="course-item-root">
                   <CourseCard course={course} />
-                </Grid>
+                </Box>
               ))}
-            </Grid>
+            </Box>
 
             {/* Nút Xem thêm */}
             {visibleLimit < coursesInBranch.length && (

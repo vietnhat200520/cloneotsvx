@@ -18,9 +18,11 @@
 }
 
 /* Ghi đè Grid Root */
-.MuiGrid-root.course-grid-root {
+.course-grid-root {
   width: 100%;
-  max-width: 280px ;
+  display: grid;
+  max-width: 1180px ;
+  grid-template-columns: repeat(4, 1fr) !important;
   margin: 0 !important;
 }
 
@@ -47,6 +49,7 @@
 
 /* Style cho CourseCard khi nằm trong Grid này */
 .course-item-root {
+  
   padding: 12px !important;
 }
 
